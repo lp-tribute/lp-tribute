@@ -1,0 +1,114 @@
+$color_white: #fff;
+$color_black: #000;
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.well {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 10px;
+}
+
+.welcome_container {
+  background-image: url('http://feelgrafix.com/data_images/out/23/940831-linkin-park.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  h1 {
+    color: $color_white;
+    margin: 0;
+    margin-top: 10vh;
+  }
+
+  svg {
+    margin-top: 33vh;
+    text-align: center;
+
+    #path {
+      animation-delay: .5s;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      animation-name: draw;
+      animation-timing-function: linear;
+      stroke-dasharray: 1885px;
+      stroke-dashoffset: 1885px;
+    }
+  }
+
+  #welcome_h1 {
+    font-size: 2.5em;
+    opacity: 0;
+  }
+}
+
+.history_container {
+  background-color: #1b1b1e;
+  margin-top: 100vh;
+  padding: 10vh 0;
+  z-index: 10;
+}
+
+.json_table {
+  color: $color_white;
+  margin: 0 auto;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid $color_white;
+  padding: 5px;
+}
+
+th {
+  border: 2px solid $color_white;
+  font-weight: 600;
+}
+
+table {
+  border: 1px solid $color_black;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.album_cover {
+  clear: both;
+  float: left;
+  margin-right: 20px;
+  max-width: 80px;
+}
+
+@keyframes draw {
+
+  90% {
+    fill-opacity: 0;
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+  }
+
+  100% {
+    fill-opacity: .7;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+  }
+}
